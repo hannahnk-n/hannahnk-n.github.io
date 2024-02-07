@@ -47,12 +47,11 @@
     
         .yes {
           font-family: "Lucida Console", "Courier New", monospace;
-          padding: 7.5px 20px;
+          padding: 10px 20px;
           background-color: green;
           color: white;
           border: none;
           cursor: pointer;
-          text-decoration: none;
         }
     
         .no {
@@ -76,7 +75,7 @@
   <body>
     <h1>Will you be my valentine?</h1>
     <div class="buttons">
-      <a class="yes" href="chooseYes.html">Yes</a>
+      <button class="yes" onclick="openHTMLFile()">Yes</button>
       <button class="no" onclick="openContainerNo()">No</button>
     </div>
   
@@ -103,6 +102,10 @@
         var currentSize = parseFloat(currentFontSize);
         yesButton.style.fontSize = (currentSize + 4) + 'px';
         }
+
+        function openHTMLFile() {
+        window.location.href = 'chooseYes.html';
+      }
     </script>
   </body>
 </html>
